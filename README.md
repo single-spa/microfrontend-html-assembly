@@ -5,6 +5,8 @@ Specification for a server assembling an HTML file from one or more microfronten
 
 Early Draft, expected to drastically change. We are looking for interested parties to collaborate with on this, and are open to catering to the needs of specific open source communities who might use it.
 
+I'm currently evaluating this against [Tailor](https://github.com/zalando/tailor), which does many of the same things. This spec deviates in approach from Tailor in that it shares a single connection for multiple html fragments, and also opens up the possibility of streaming content on a first-possible basis instead of in a strictly ordered basis.
+
 ## Overview
 
 When responding to a browser's HTTP request, a web server (the "root server") must assemble an HTML file. Doing so becomes complex when the HTML is generated dynamically by multiple sources (or "microfrontends"). There is only one HTTP response that is sent to the browser, but each microfrontend may want to influence some or all of the following:
