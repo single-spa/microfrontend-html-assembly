@@ -15,9 +15,9 @@ When responding to a browser's HTTP request, a web server (the "root server") mu
 
 This specification provides a standardized message format between the web server and the microfrontends that allows the microfrontends to accomplish the above. The message format in this specification is guided by the following principles:
 
-a) Fully support streaming content to the browser over time, instead of sending the full HTML file at once.
-b) Decentralize logic when sensible, by moving it to the microfrontends instead of the root server.
-c) Usable by both single page applications **and** traditional web applications. Not specific to React, Vue, Angular, etc, although UI frameworks may be used as part of generating the HTML content.
+1. Fully support streaming content to the browser over time, instead of sending the full HTML file at once.
+2. Decentralize logic when sensible, by moving it to the microfrontends instead of the root server.
+3. Usable by both single page applications **and** traditional web applications. Not specific to React, Vue, Angular, etc, although UI frameworks may be used as part of generating the HTML content.
 
 ## Specification Scope
 
@@ -48,11 +48,11 @@ By default, there are three render passes:
 2. HTML `<head>` content
 3. HTML `<body>` content
 
-Each microfrontend participates in zero or more render passes. Render passes may be extended to allow for "render steps" that occur within a single render phase. Render steps are offered as a way to extend render phases for advanced use cases.
+Each microfrontend participates in zero or more render passes. Render passes may be extended to allow for "render steps" that occur within a single render pass. Render steps are offered as a way to extend render phases for advanced use cases.
 
 ## Message format
 
-A "message" is the content sent from microfrontend to root server for a single render pass. In other words, each microfrontend sends multiple messages - one per render pass that it wishes to participate in. Messages may be sent in any json-like format, but must be structured as following:
+A "message" is the content sent from microfrontend to root server for a single render pass. Each microfrontend sends multiple messages - one per render pass that it wishes to participate in. Messages may be sent in any json-like format, but must be structured as following:
 
 ```js
 {
@@ -121,7 +121,7 @@ All messages for the `head` render pass must have a content property that matche
 ```js
 {
   "renderPass": {
-    "name": "head"
+    "name": "body"
   },
   "content": {
     "body": [
