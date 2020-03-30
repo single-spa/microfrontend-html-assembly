@@ -3,7 +3,7 @@ Specification for a server assembling an HTML file from one or more microfronten
 
 ## Specification Status
 
-Early Draft, expected to drastically change.
+Early Draft, expected to drastically change. We are looking for interested parties to collaborate with on this, and are open to catering to the needs of specific open source communities who might use it.
 
 ## Overview
 
