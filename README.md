@@ -137,3 +137,8 @@ All messages for the `head` render pass must have a content property that matche
 It is possible for separate microfrontends to send conflicting information to the root-server. For example, one microfrontend may specify an HTTP status of 200 while another specifies 302. Or one may specify `<title>Article 1</title>` while another specifies `<title>News Company.com</title>`.
 
 In such cases, it is up to the root server to determine which to prioritize or whether to throw an error. (More work on this to come later)
+
+## To-dos
+
+- Flesh out duplicate resolution.
+- Handle ordering / layout.
