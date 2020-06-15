@@ -3,9 +3,9 @@ Specification for a server assembling an HTML file from one or more microfronten
 
 ## Specification Status
 
-Early Draft, expected to drastically change. We are looking for interested parties to collaborate with on this, and are open to catering to the needs of specific open source communities who might use it.
+Discarded.
 
-I'm currently evaluating this against [Tailor](https://github.com/zalando/tailor), which does many of the same things. This spec deviates in approach from Tailor in that it shares a single connection for multiple html fragments, and also opens up the possibility of streaming content on a first-possible basis instead of in a strictly ordered basis.
+[Tailor](https://github.com/zalando/tailor) does many of the same things. This spec deviates in approach from Tailor in that it shares a single connection for multiple html fragments, and also opens up the possibility of streaming content on a first-possible basis instead of in a strictly ordered basis.
 
 ## Overview
 
